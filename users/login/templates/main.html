@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<html>
+<body>
+{% if user.username %}
+<h1>Welcome {{ user.username }}!</h1>
+
+<p>Welcome {{ user.username }} from {{ user.profile.location }}!
+Here you can show your content!</p>
+
+<hr>
+<a href="logout">logout</a>
+
+{% else %}
+<p>Welcome To Seams!
+You need to <a href="/login/">login</a></p>
+{% endif %}
+</body>
+</html>
+{% endblock %}

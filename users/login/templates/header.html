@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Seams</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'login/css/bootstrap.min.css' %}" type = "text/css"/>
+
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+	</style>
+	<style>
+#grad1 {
+
+    background: red; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left top, DeepSkyBlue , cyan ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, DeepSkyBlue , cyan ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, DeepSkyBlue , cyan ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, DeepSkyBlue , cyan ); /* Standard syntax (must be last) */
+}
+</style>
+</head>
+<body class="body" style="background-color:#f6f6f6" id="grad1">
+<center>
+<div class='container-fluid' style='width: 100%;'>
+<div class="row">
+<div class="col-sm-12">
+<br><br>
+{% block content %}
+
+{% endblock %}
+</div>
+</div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'style/stylesheet.css' %}" type = "text/css"/>
+<div class="container" style="border: 1px solid #ccc;">
+    <div class="row-fluid">
+        <div class="col-md-6">
+            {% for p in user.project_set.all %}
+            <a href="/projectdetails/{{ p.pk }}" style="font-weight: bold;">{{ p }}</a>
+            <br/>
+            {{ p.info }}
+            <hr>
+            {% endfor %}
+        </div>
+        <div class="col-md-6">
+            <a href="add" class="btn btn-default">Add a project</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

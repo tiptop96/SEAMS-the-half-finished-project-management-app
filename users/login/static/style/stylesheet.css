@@ -1,0 +1,16 @@
+.customcont {
+    background-color: white;
+    border-radius: 10px;
+    border: 5px solid gray;
+    min-height: 500px;
+}
+
+.panel-default > .panel-heading-green {
+    background: #2af73e;
+    color: #fff;
+}
+
+.panel-default > .panel-heading-blue {
+    background: #2fb4fe;
+    color: #fff;
+}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+<div class ="panel panel-heading">
+<h3>{{project.title}}</h3>
+<h6>Info</h6>
+{{project.info|safe|linebreaks}}
+</div>
+
+<div class="panel panel-body">
+<form method="post" action="">
+  {% csrf_token %}
+    <div class="col-md-8">
+    {{ project_form|crispy }}
+        <button class="btn btn-primary" type="submit">Save changes</button>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+</form>
+</div>
+{% endblock %}
